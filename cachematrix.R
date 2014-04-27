@@ -6,7 +6,7 @@
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
     ## element set for CacheMatrix, with NULL inverse.
-    ## function to define matrix itself and invers. 
+    ## function to define matrix itself and inverse. 
     set <- function(y) {
         ## with <<- we access variable names from enclosing environment of the makeCacheMatrix function
         x <<- y
@@ -17,7 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
     get <- function() x
     
     ## element setsolve  for calculationg CacheMatrix inverse
-    ## passing invers of the matrix as solve variable and storing in in m from enclosing environment of the makeCacheMatrix function
+    ## passing inverse of the matrix as solve variable and storing in in m from enclosing environment of the makeCacheMatrix function
     setsolve <- function(solve) m <<- solve
     
     ## element getsolve for CacheMatrix inverse - returning inverse
